@@ -1,0 +1,27 @@
+---
+defaults: &defaults
+  instances: 1
+  disk_quota: 1g
+  memory: 1g
+  env:
+    DOCKER_USERNAME: ((DOCKER_USERNAME))
+    MAXMIND_ACCOUNT_ID: ((MAXMIND_ACCOUNT_ID))
+    MAXMIND_LICENSE_KEY: ((MAXMIND_LICENSE_KEY))
+applications:
+- name: example-web-app
+  <<: *defaults
+  docker:
+    image: ((DOCKER_REGISTRY))/((DOCKER_NAMESPACE))/example-web-app:((DOCKER_TAG))
+    username: ((DOCKER_USERNAME))
+  routes:
+    - route: example-web-app-7b7315a8.us-east.philips-healthsuite.com
+  health-check-type: process
+- name: cf-geo-blocker
+  <<: *defaults
+  docker:
+    image: ((DOCKER_REGISTRY))/((DOCKER_NAMESPACE))/cf-geo-blocker:((DOCKER_TAG))
+    username: ((DOCKER_USERNAME))
+  disk_quota: 2g
+  routes:
+    - route: cf-geo-blocker-7b7315a8.us-east.philips-healthsuite.com
+  health-check-type: process
