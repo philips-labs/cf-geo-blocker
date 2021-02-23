@@ -1,7 +1,5 @@
 # Cloud Foundry GeoIP Blocking
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![badge](https://badgen.net/badge/SNOW/RITM0063623/green?icon=docker)](https://philipshsdp.service-now.com/nav_to.do?uri=sc_req_item.do?sys_id=74a85bcbdb1b10141cc017a94b9619d3%26sysparm_view=RPTe76797240f580300552ec4dce1050e4a)
-[![badge](https://badgen.net/badge/Jira/DPO-7827/blue?icon=docker)](https://healthsuite.atlassian.net/browse/DPO-7827)
 
 ## Purpose
 Provide the ability to block requests to a HSDP Cloud Foundry hosted application based on GeoIP leveraging Cloud Foundry Route Services.
