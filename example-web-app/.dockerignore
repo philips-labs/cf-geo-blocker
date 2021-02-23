@@ -1,0 +1,5 @@
+.env
+.env.tmpl
+.dockerignore
+Dockerfile
+README.md
